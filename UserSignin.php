@@ -26,13 +26,13 @@ include 'db.php';
             <h1 class="heading1">Create Account</h1>
             <div class="formcontrols">
                 <label class="ilabel">Name</label>
-                <input type="username" class="inputfield" name="Uname" placeholder="Enter your full name">
+                <input type="username" class="inputfield" name="Uname" placeholder="Enter your full name" required autofocus>
                 <label class="ilabel">Email ID</label>
-                <input type="email" class="inputfield" name="Uemail" placeholder="Enter your email address">
+                <input type="email" class="inputfield" name="Uemail" placeholder="Enter your email address" required>
                 <label class="ilabel">Password</label>
-                <input type="password" class="inputfield" name="Upswd" placeholder="Enter your password">
+                <input type="password" class="inputfield" name="Upswd" placeholder="Enter your password" minlength="8" maxlength="16" required>
                 <label class="ilabel">Confirm Password</label>
-                <input type="password" class="inputfield" name="UCpswd" placeholder="Re-Enter your password">
+                <input type="password" class="inputfield" name="UCpswd" placeholder="Re-Enter your password" minlength="8" maxlength="16" required>
             </div>
             <?php
             session_start();

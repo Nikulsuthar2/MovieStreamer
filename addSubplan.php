@@ -23,7 +23,7 @@ if(!isset($_SESSION['username']))
     <nav>
         <label class="Logo">MOVIE STREAMER</label>
         <ul class="drawer">
-            <li><a class="adminbtn" href="#"><?php if(isset($_SESSION['username'])){ echo implode($_SESSION['username']);}?></a></li>
+            <li><a class="adminbtn" href="#"><?php if(isset($_SESSION['username'])){ echo $_SESSION['username'];}?></a></li>
             <li><a class="loginbtn" href="logout.php?id=2">LOG OUT</a></li>
         </ul>
     </nav>
@@ -38,7 +38,7 @@ if(!isset($_SESSION['username']))
         <div class="mainview">
             <div class="header">
                 <h1>Add Subscription Plan</h1>
-                <a class="addbtn" href="Actors.php">Go Back</a>
+                <a class="addbtn" href="Subscribeplan.php">Go Back</a>
             </div>
             <div class="mainform">
                 <div class="litopbar">

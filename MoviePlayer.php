@@ -24,6 +24,18 @@ else
     if($res)
     {
         $movdtl = mysqli_fetch_assoc($res);
+        $movsubscribe = $movdtl['subType'];
+        
+        echo "<script>alert(".$movsubscribe.")</script>";
+        
+        if($movsubscribe == "paid")
+        {
+            if(in_array("free",$subscription))
+            {
+                //echo "<script>alert('Not for you')</script>";
+                header('location: BuySubscription.php');
+            }
+        }
     }
 
 
@@ -66,7 +78,7 @@ else
         <div class="navmenucontainer">
             <label class="Logo">MOVIE STREAMER</label>
             <ul class="navmenu">
-                <li><a class="navmenuitem menuactive" href="#">Home</a></li>
+                <li><a class="navmenuitem menuactive" href="UserHome.php">Home</a></li>
                 <li><a class="navmenuitem" href="#">Free</a></li>
                 <li><a class="navmenuitem" href="#">Kids</a></li>
             </ul>
@@ -145,6 +157,41 @@ else
                 <div class="descbox">
                     <label class="proptitle">Description : <br></label>
                     <div style="padding: 10px;"><label><?php if(isset($movdtl)){echo $movdtl['description'];}?></label></div>
+                </div>
+
+                <div class="castdtl">
+                    <label class="proptitle">Cast : <br></label>
+                    <div class="castbox">
+                        <?php 
+                            $upq2 = "select * from cast_dtl where movie_id = $movid";
+                            $r2 = mysqli_query($con,$upq2);
+                            if($r2)
+                            {
+                                $i = 0;
+                                while($castdtl = mysqli_fetch_assoc($r2))
+                                {
+                                    $castinmov[$i] = $castdtl['actor_id'];
+                                    $i++;
+                                }
+                            }
+                            $q2 = "select * from actor_dtl";
+                            $result2 = mysqli_query($con,$q2);
+                            if($result2)
+                            {
+                                while($row2 = mysqli_fetch_assoc($result2))
+                                {
+                                    if(in_array($row2['actor_id'],$castinmov))
+                                    {
+                                        echo "<div class='castinfo'>
+                                        <div class='castimgbox'>
+                                        <img class='castimg' src='".$row2['imagepath']."' width='100%' height='100%'></div>
+                                        <label class='castname'>".$row2['name']."</label>
+                                        </div>";
+                                    }
+                                }
+                            } 
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

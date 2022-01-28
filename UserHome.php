@@ -9,11 +9,22 @@ if(!isset($_SESSION['username']) || !isset($_SESSION['userid']))
 else
 {
     $userid = $_SESSION['userid'];
-    $q = "select subscription from user_dtl where user_id = $userid";
+    $q = "select * from user_dtl where user_id = $userid";
     $res = mysqli_query($con, $q);
     if($res)
     {
         $subscription = mysqli_fetch_assoc($res);
+        $subexpdt = $subscription['sub_exp_date'];
+        $currentdt = date("Y-m-d");
+        if($currentdt > $subexpdt)
+        {
+            $resetsubq = "UPDATE `user_dtl` SET `subscription`='free',`sub_date`=null,`sub_exp_date`=null WHERE user_id = $userid";
+            $resetresult = mysqli_query($con,$resetsubq);
+            if($resetresult)
+            {
+                header('location: UserHome.php');
+            }
+        }
     }
 }
 ?>
@@ -34,7 +45,7 @@ else
             });
         })
     </script>
-    <title>User Login</title>
+    <title>HOME</title>
 </head>
 <body>
     <!--Navigation Bar -->
@@ -42,7 +53,7 @@ else
         <div class="navmenucontainer">
             <label class="Logo">MOVIE STREAMER</label>
             <ul class="navmenu">
-                <li><a class="navmenuitem menuactive" href="#">Home</a></li>
+                <li><a class="navmenuitem menuactive" href="UserHome.php">Home</a></li>
                 <li><a class="navmenuitem" href="#">Free</a></li>
                 <li><a class="navmenuitem" href="#">Kids</a></li>
             </ul>
@@ -95,7 +106,7 @@ else
             <label class="genreTitle">Recently Added</label>
             <div class="movielist">
                 <?php 
-                $recentq = "select * from movie_dtl order by movie_id desc limit 5";
+                $recentq = "select * from movie_dtl order by movie_id desc limit 10";
                 $recentr = mysqli_query($con, $recentq);
                 if($recentr)
                 {
@@ -113,7 +124,7 @@ else
             <label class="genreTitle">Recently Released</label>
             <div class="movielist">
                 <?php 
-                $recentq = "select * from movie_dtl order by releasedt desc limit 5";
+                $recentq = "select * from movie_dtl order by releasedt desc limit 10";
                 $recentr = mysqli_query($con, $recentq);
                 if($recentr)
                 {
@@ -127,7 +138,34 @@ else
                 ?>
             </div>
         </div>
-        
+        <?php
+            $catq = "select * from category";
+            $catresult = mysqli_query($con,$catq);
+            if($catresult)
+            {
+                while($category = mysqli_fetch_assoc($catresult))
+                {
+                    echo "<div class='movGenreSection'>
+                    <label class='genreTitle'>".$category['cat_name']."</label>
+                    <div class='movielist'>";
+                    
+                    $genmovq = "select a.movie_id, a.posterpath, b.cat_id from movie_dtl a, genre_dtl b where a.movie_id = b.movie_id and b.cat_id = '$category[cat_id]'";
+                    $genreres = mysqli_query($con, $genmovq);
+                    $count = mysqli_num_rows($genreres);
+                    if($genreres)
+                    {
+                        while($catlist = mysqli_fetch_assoc($genreres))
+                        {
+                            echo "<a href='MoviePlayer.php?movid=$catlist[movie_id]'>
+                            <img class='movSmallPoster' src='$catlist[posterpath]' height='300px'>
+                            </a>";
+                        }
+                    }
+                            
+                    echo "</div></div>";
+                }
+            }
+        ?>
     </div>
 </body>
 </html>

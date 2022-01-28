@@ -32,7 +32,7 @@ if(isset($_GET['del']))
     <nav>
         <label class="Logo">MOVIE STREAMER</label>
         <ul class="drawer">
-            <li><a class="adminbtn" href="#"><?php if(isset($_SESSION['username'])){ echo implode($_SESSION['username']);}?></a></li>
+            <li><a class="adminbtn" href="#"><?php if(isset($_SESSION['username'])){ echo $_SESSION['username'];}?></a></li>
             <li><a class="loginbtn" href="logout.php?id=2">LOG OUT</a></li>
         </ul>
     </nav>
@@ -59,7 +59,7 @@ if(isset($_GET['del']))
                             <th>id</th>
                             <th>Name</th>
                             <th>Price</th>
-                            <th>Duration</th>
+                            <th width="20%">Duration (in months)</th>
                             <th width="30%">Operations</th>
                         </tr>
                         <?php

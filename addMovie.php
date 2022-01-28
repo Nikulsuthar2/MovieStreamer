@@ -32,7 +32,7 @@ if(!isset($_SESSION['username']))
     <nav>
         <label class="Logo">MOVIE STREAMER</label>
         <ul class="drawer">
-            <li><a class="adminbtn" href="#"><?php if(isset($_SESSION['username'])){ echo implode($_SESSION['username']);}?></a></li>
+            <li><a class="adminbtn" href="#"><?php if(isset($_SESSION['username'])){ echo $_SESSION['username'];}?></a></li>
             <li><a class="loginbtn" href="logout.php?id=2">LOG OUT</a></li>
         </ul>
     </nav>

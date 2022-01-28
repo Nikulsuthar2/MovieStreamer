@@ -27,7 +27,7 @@ else
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/comman.css">
-    <link rel="stylesheet" href="CSS/userhome.css">
+    <link rel="stylesheet" href="CSS/payment.css">
     <title>PAY</title>
 </head>
 <body>
@@ -131,7 +131,6 @@ else
                                             {
                                                 header("location: PayRecipt.php?price=$plandtl[price]&month=$plandtl[Duration]");
                                             }
-                                            
                                         }
                                     }
                                     
