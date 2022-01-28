@@ -1,0 +1,280 @@
+:root {
+    --navbg: #404040;
+    --fontfam: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --colorbtnprime: #F95151;
+    --colorbtnsec: white;
+    --colorbtnprimehover: #da4343;
+}
+
+.mainbody {
+    display: flex;
+    height: 90.8vh;
+    position: fixed;
+    width: 100%;
+    top: 57px;
+    font-family: var(--fontfam);
+}
+
+.sidebar {
+    background-color: var(--navbg);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    padding: 5px;
+    gap: 5px;
+    z-index: 1;
+}
+
+.sideitem {
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    background-color: #636363ab;
+    color: wheat;
+    width: 92.5%;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.sideitem:hover {
+    background-color: var(--colorbtnprime);
+    letter-spacing: 3px;
+}
+
+.active {
+    background-color: var(--colorbtnprime);
+}
+
+.mainview {
+    overflow: auto;
+    width: 80%;
+    padding: 20px;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.searchbox {
+    height: 30px;
+    border: none;
+    background-color: rgb(211, 228, 243);
+    border-radius: 5px;
+    outline: none;
+    padding-left: 5px;
+    width: 300px;
+}
+
+.searchbtn {
+    border: none;
+    background-color: transparent;
+}
+
+
+/* FOR ADMIN HOME DASHBOARD*/
+
+.adminhomemain {
+    margin: 20px;
+    padding-left: 10px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.itemcard {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+    background-color: var(--colorbtnprime);
+    border-radius: 10px;
+    width: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.itemlabel {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.itemvalue {
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--navbg);
+    font-weight: bold;
+}
+
+
+/* Actors Page */
+
+.addbtn {
+    text-decoration: none;
+    color: white;
+    background-color: #2eace7;
+    font-weight: bold;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.addbtn:hover {
+    background-color: #238cbd;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainlist {
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);
+}
+
+.litopbar {
+    background-color: #2eace7;
+    padding: 10px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.litable {
+    padding: 10px;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(211, 211, 211);
+    border-collapse: collapse;
+    background-color: aliceblue;
+}
+
+td {
+    text-align: center;
+    height: 70px;
+    padding: 5px;
+}
+
+.editbtn {
+    background-color: royalblue;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.editbtn:hover {
+    background-color: rgb(46, 79, 177);
+}
+
+.deletebtn {
+    background-color: rgb(255, 73, 73);
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.deletebtn:hover {
+    background-color: rgb(206, 55, 55);
+}
+
+
+/* ADD ACTOR PAGE */
+
+.mainform {
+    margin: 40px;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);
+}
+
+.actordtl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 40px;
+    border-radius: inherit;
+    gap: 10px;
+}
+
+.lblfrm {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.txtboxfrm {
+    height: 30px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+input[type=file]::file-selector-button {
+    border: none;
+    padding: 10px;
+    background-color: bisque;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: rgb(211, 196, 177);
+    border-radius: 20px;
+}
+
+.addactbtn {
+    background-color: #2eace7;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    width: 200px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.addactbtn:hover {
+    background-color: #238cbd;
+    letter-spacing: 5px;
+}
+
+
+/* ADD MOVIE PAGE */
+
+.descbox {
+    padding: 10px;
+    font-family: var(--fontfam);
+    font-size: 15px;
+}
+
+
+/* subscription plan */

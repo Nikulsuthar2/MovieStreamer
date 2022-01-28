@@ -1,0 +1,94 @@
+:root {
+    --navbg: #404040;
+    --fontfam: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --colorbtnprime: #F95151;
+    --colorbtnsec: white;
+    --colorbtnprimehover: #da4343;
+    --logofontsz: 20px;
+    --logocolor: #F95151;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Navigation bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: var(--navbg);
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.418);
+}
+
+
+/* Navigation bar button*/
+
+.drawer {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Navigation bar Logo*/
+
+.Logo {
+    color: var(--logocolor);
+    font-family: var(--fontfam);
+    font-weight: bold;
+    text-shadow: 0px 2px 6px black;
+    font-size: var(--logofontsz);
+}
+
+
+/* Navigation bar Login button*/
+
+.loginbtn {
+    text-decoration: none;
+    color: white;
+    background-color: var(--colorbtnprime);
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.486);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.473);
+    font-family: var(--fontfam);
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.loginbtn:hover {
+    background-color: var(--colorbtnprimehover);
+    border-radius: 10px;
+}
+
+
+/* Navigation bar Admin button*/
+
+.adminbtn {
+    text-decoration: none;
+    color: var(--colorbtnsec);
+    background-color: transparent;
+    text-shadow: 0px 2px 6px black;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: var(--fontfam);
+    transition: all 0.2s ease-in-out;
+}
+
+.adminbtn:hover {
+    color: var(--colorbtnprime);
+}

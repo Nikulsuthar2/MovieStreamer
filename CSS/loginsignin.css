@@ -1,0 +1,76 @@
+:root {
+    --mainbg: #f3f3f3;
+    --fontfm: 'Segoe UI';
+    --colorbtnprime: #F95151;
+    --colorbtnsec: white;
+    --colorbtnprimehover: #da4343;
+}
+
+.mainbody {
+    background-color: var(--mainbg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    font-family: var(--fontfm);
+}
+
+form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 50px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.308);
+}
+
+.formcontrols {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.inputfield {
+    border: none;
+    outline: none;
+    height: 30px;
+    background-color: #E1E1E1;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid gray;
+    transition: all 0.3s ease;
+}
+
+.inputfield:focus {
+    border-bottom: 2px solid var(--colorbtnprime);
+    background-color: #ffcaca;
+}
+
+.heading1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.loginbutton {
+    background-color: var(--colorbtnprime);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.loginbutton:hover {
+    background-color: var(--colorbtnprimehover);
+    border-radius: 20px;
+    letter-spacing: 5px;
+}

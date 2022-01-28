@@ -1,0 +1,49 @@
+:root {
+    --mainbg: #f3f3f3;
+    --fontfm: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --colorbtnprime: #F95151;
+    --colorbtnsec: white;
+    --colorbtnprimehover: #da4343;
+}
+
+.mainbody {
+    background-color: var(--mainbg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+}
+
+.heading1 {
+    font-size: 60px;
+    font-family: var(--fontfm);
+    text-align: center;
+}
+
+.heading2 {
+    font-size: 30px;
+    font-family: var(--fontfm);
+    text-align: center;
+}
+
+.signinbtn {
+    font-family: var(--fontfm);
+    color: var(--colorbtnsec);
+    background-color: var(--colorbtnprime);
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.signinbtn:hover {
+    border-radius: 20px;
+    letter-spacing: 5px;
+    background-color: var(--colorbtnprimehover);
+}
