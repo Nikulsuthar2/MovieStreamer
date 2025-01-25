@@ -13,6 +13,19 @@
     padding: 0;
 }
 
+.subscribebtn {
+    background-color: royalblue;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.subscribebtn:hover {
+    background-color: rgb(47, 79, 175);
+}
+
 
 /* Navigation bar */
 
@@ -91,4 +104,11 @@ nav {
 
 .adminbtn:hover {
     color: var(--colorbtnprime);
+}
+
+.mainbody {
+    background-color: #F3F3F3;
+    height: 90vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }

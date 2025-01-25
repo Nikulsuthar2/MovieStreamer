@@ -82,10 +82,9 @@
 /* FOR ADMIN HOME DASHBOARD*/
 
 .adminhomemain {
-    margin: 20px;
-    padding-left: 10px;
+    margin: 20px 0px;
     display: flex;
-    gap: 50px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -93,13 +92,13 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
     background-color: var(--colorbtnprime);
     border-radius: 10px;
-    width: 300px;
+    width: 240px;
     padding: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
 }
 
 .itemlabel {
@@ -139,7 +138,7 @@
 }
 
 .mainlist {
-    margin: 20px;
+    margin: 20px 0px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);
 }
@@ -153,6 +152,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.litopval{
+    color: black;
+    font-weight: 500;
 }
 
 .litable {
@@ -184,7 +188,7 @@ td {
     background-color: royalblue;
     text-decoration: none;
     color: white;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 15px;
 }
 
@@ -196,7 +200,7 @@ td {
     background-color: rgb(255, 73, 73);
     text-decoration: none;
     color: white;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 15px;
 }
 

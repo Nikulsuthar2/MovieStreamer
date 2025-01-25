@@ -1,0 +1,56 @@
+.mainbody {
+    padding: 20px 80px;
+    height: 85vh;
+}
+
+.navmenucontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.navmenu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navmenuitem {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.navmenuitem:hover {
+    color: var(--colorbtnprime);
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.479);
+}
+
+.menuactive {
+    color: var(--colorbtnprime);
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.479);
+}
+
+body {
+    font-family: var(--fontfam);
+    overflow: hidden;
+}
+
+.movresult {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.genreTitle {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.movSmallPoster {
+    border-radius: 10px;
+}

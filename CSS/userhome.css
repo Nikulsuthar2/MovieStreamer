@@ -6,10 +6,12 @@
     --colorbtnprimehover: #da4343;
     --logofontsz: 20px;
     --logocolor: #F95151;
+    --mainbg: #F3F3F3;
 }
 
 body {
     font-family: var(--fontfam);
+    overflow: hidden;
 }
 
 .subscribebtn {
@@ -85,6 +87,20 @@ body {
 
 .mainbody {
     background-color: #F3F3F3;
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.mainbody::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+
+.mainbody::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .recentbig {
@@ -97,10 +113,10 @@ body {
 }
 
 .textboxonimg {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
-    top: 150px;
+    top: -300px;
     gap: 50px;
     left: 100px;
 }
@@ -125,25 +141,40 @@ body {
 }
 
 .movGenreSection {
-    padding: 50px;
-    padding-left: 80px;
-    padding-bottom: 0px;
+    padding: 30px 80px 0px 80px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .genreTitle {
     font-weight: bold;
     font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewmorebtn {
+    text-decoration: none;
+    color: royalblue;
+    font-size: 20px;
 }
 
 .movielist {
     display: flex;
-    gap: 40px;
+    gap: 30px;
+    overflow-y: scroll;
+    transition: all 0.5s ease;
+}
+
+.movielist::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
 }
 
 .movSmallPoster {
+    aspect-ratio: 9 / 14;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -232,6 +263,10 @@ body {
 
 .paymain {
     padding: 50px;
+    background-color: #F3F3F3;
+    height: 84vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .options {
@@ -297,12 +332,22 @@ body {
     color: #F95151;
 }
 
+.selectedpayment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .cardspay {
     display: flex;
     flex-direction: column;
     background-color: white;
+    width: 80%;
     margin-top: 30px;
     padding: 30px;
+    gap: 10px;
     border-radius: 20px;
 }
 
@@ -328,23 +373,42 @@ input[type=text] {
 }
 
 .videoplayer {
+    border-radius: 10px;
     height: 450px;
     width: 67%;
 }
 
 .movieposter {
+    border-radius: 10px;
     height: 450px;
+    aspect-ratio: 9 / 14;
+    object-fit: cover;
     width: fit-content;
 }
 
 .movtitle {
-    font-size: 50px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.wishlistbtn{
+    height: 60px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .movinfobox {
     padding-left: 80px;
     padding-right: 80px;
 }
+
+
 
 .movsmalldtl {
     color: gray;
@@ -366,4 +430,44 @@ input[type=text] {
 .descbox {
     width: 600px;
     margin-top: 30px;
+}
+
+.castdtl {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.castbox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    gap: 20px;
+}
+
+.castinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 80px;
+    gap: 10px;
+}
+
+.castimgbox {
+    height: 80px;
+    width: 80px;
+}
+
+.castimg {
+    object-fit: cover;
+    object-position: 0 0;
+    border-radius: 50%;
+    outline: 3px solid var(--colorbtnprime);
+    outline-style: double;
+}
+
+.castname {
+    color: black;
+    font-size: 12px;
 }

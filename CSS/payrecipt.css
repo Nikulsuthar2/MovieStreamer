@@ -1,0 +1,68 @@
+/* PAY RECIPT*/
+
+:root {
+    --navbg: #404040;
+    --fontfam: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --colorbtnprime: #F95151;
+    --colorbtnsec: white;
+    --colorbtnprimehover: #da4343;
+    --logofontsz: 20px;
+    --logocolor: #F95151;
+    --mainbg: #F3F3F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontfam);
+}
+
+body {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.payrecipt {
+    background-color: var(--mainbg);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.paysuccessheader {
+    font-size: 80px;
+    color: royalblue;
+}
+
+.moneypaid {
+    color: green;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.monthfree {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.gohomebtn {
+    background-color: var(--colorbtnprime);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.gohomebtn:hover {
+    background-color: var(--colorbtnprimehover);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+    border-radius: 5px;
+}
