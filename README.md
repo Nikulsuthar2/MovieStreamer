@@ -102,3 +102,17 @@ A basic movie streaming and subscription platform developed in PHP and MySQL. Th
 
 ---
 ## Screenshots
+
+![index](https://github.com/Nikulsuthar2/MovieStreamer/blob/main/Screenshot/movieindex.png?raw=true)
+
+![login](https://github.com/Nikulsuthar2/MovieStreamer/blob/main/Screenshot/movielogin.png?raw=true)
+![signup](https://github.com/Nikulsuthar2/MovieStreamer/blob/main/Screenshot/moviesignup.png?raw=true)
+![home](https://github.com/Nikulsuthar2/MovieStreamer/blob/main/Screenshot/moviehome.png?raw=true)
+![home2](https://github.com/Nikulsuthar2/MovieStreamer/blob/main/Screenshot/moviehome2.png?raw=true)
+![movie](https://github.com/Nikulsuthar2/MovieStreamer/blob/main/Screenshot/movieplayer.png?raw=true)
+![profile](https://github.com/Nikulsuthar2/MovieStreamer/blob/main/Screenshot/movieprofile.png?raw=true)
+![subscribe](https://github.com/Nikulsuthar2/MovieStreamer/blob/main/Screenshot/subscription.png?raw=true)
+![payment](https://github.com/Nikulsuthar2/MovieStreamer/blob/main/Screenshot/moviepayment.png?raw=true)
+![paymentsuccess](https://github.com/Nikulsuthar2/MovieStreamer/blob/main/Screenshot/moviepayrecipt.png?raw=true)
+
+More Screenshot in `Screenshot` folder
